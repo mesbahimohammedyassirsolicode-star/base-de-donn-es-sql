@@ -4,13 +4,14 @@ CREATE DATABASE gestion_projets;
 -- Utilisation de la base
 USE gestion_projets;
 -- Création de la table EMPLOYE
-CREATE table EMPLOYE (
+CREATE TABLE EMPLOYE (
     id_employe INT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     email VARCHAR(100),
-    role VARCHAR(50) 
+    role ENUM('Chef de projet', 'Developpeur', 'Designer', 'Testeur') NOT NULL
 );
+
 -- Création de la table PROJET
 CREATE TABLE PROJET (
 id_projet INT PRIMARY KEY,
